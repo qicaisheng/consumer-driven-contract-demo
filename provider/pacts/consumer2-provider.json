@@ -1,0 +1,38 @@
+{
+    "provider": {
+        "name": "provider"
+    },
+    "consumer": {
+        "name": "consumer2"
+    },
+    "interactions": [
+        {
+            "description": "Get students",
+            "request": {
+                "method": "GET",
+                "path": "/students"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                "body": [
+                    {
+                        "age": 18,
+                        "id": 5
+                    }
+                ]
+            },
+            "providerState": "contract for consumer2"
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "2.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.3.0"
+        }
+    }
+}

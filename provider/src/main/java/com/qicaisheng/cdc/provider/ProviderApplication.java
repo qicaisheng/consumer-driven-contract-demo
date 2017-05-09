@@ -18,6 +18,11 @@ public class ProviderApplication {
 
     @RequestMapping(value = "/students", produces = "application/json;charset=UTF-8")
     public List<Student> getStudents() {
-        return Arrays.asList(new Student(5, "James"));
+        Student student = new Student();
+        student.setId(5);
+        student.setName("James");
+        student.setAge(18);
+
+        return Arrays.asList(student);
     }
 }

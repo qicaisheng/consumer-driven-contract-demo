@@ -2,7 +2,6 @@ package com.qicaisheng.cdc.provider;
 
 import au.com.dius.pact.provider.junit.PactRunner;
 import au.com.dius.pact.provider.junit.Provider;
-import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.loader.PactFolder;
 import au.com.dius.pact.provider.junit.target.HttpTarget;
 import au.com.dius.pact.provider.junit.target.Target;
@@ -25,10 +24,6 @@ import static com.github.restdriver.clientdriver.RestClientDriver.onRequestTo;
 public class ProviderPactTests {
 	@ClassRule
 	public static final ClientDriverRule embeddedService = new ClientDriverRule(8080);
-
-	@State("contract for consumer1")
-	public void toVerifiesConsumer1GettingStudents() {
-	}
 
 	@TestTarget // Annotation denotes Target that will be used for tests
 	public final Target target = new HttpTarget(8080);

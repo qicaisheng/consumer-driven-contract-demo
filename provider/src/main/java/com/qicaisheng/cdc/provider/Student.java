@@ -6,13 +6,9 @@ package com.qicaisheng.cdc.provider;
 public class Student {
     private long id;
     private String name;
+    private int age;
 
     public Student() {
-    }
-
-    public Student(long id, String name) {
-        this.id = id;
-        this.name = name;
     }
 
     public long getId() {
@@ -29,5 +25,13 @@ public class Student {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
