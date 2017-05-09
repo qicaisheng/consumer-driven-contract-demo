@@ -1,0 +1,38 @@
+{
+    "provider": {
+        "name": "provider"
+    },
+    "consumer": {
+        "name": "consumer1"
+    },
+    "interactions": [
+        {
+            "description": "Get students",
+            "request": {
+                "method": "GET",
+                "path": "/students"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                "body": [
+                    {
+                        "id": 5,
+                        "name": "James"
+                    }
+                ]
+            },
+            "providerState": "contract for consumer1"
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "2.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.3.0"
+        }
+    }
+}
