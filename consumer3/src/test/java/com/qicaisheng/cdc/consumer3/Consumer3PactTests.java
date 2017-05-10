@@ -27,12 +27,12 @@ public class Consumer3PactTests {
 		return builder
 				.given("contract for consumer3")
 				.uponReceiving("Get students")
-				.path("/students")
-				.method("GET")
+					.path("/students")
+					.method("GET")
 				.willRespondWith()
-				.status(200)
-				.headers(headers)
-				.body("[{\"id\": 5, \"name\": \"James\", \"age\": 18}]")
+					.status(200)
+					.headers(headers)
+					.body("[{\"id\": 5, \"name\": \"James\", \"age\": 18}]")
 				.toFragment();
 	}
 
