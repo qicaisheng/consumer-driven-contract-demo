@@ -5,7 +5,6 @@ import au.com.dius.pact.consumer.PactProviderRule;
 import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
 import au.com.dius.pact.model.PactFragment;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -21,7 +20,7 @@ public class Consumer3PactTests {
 	public PactProviderRule mockProvider = new PactProviderRule("provider", "localhost", 8080, this);
 
 	@Pact(consumer="consumer3")
-	public PactFragment createFragment(PactDslWithProvider builder) throws JsonProcessingException {
+	public PactFragment createFragment(PactDslWithProvider builder) {
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json;charset=utf-8");
 
