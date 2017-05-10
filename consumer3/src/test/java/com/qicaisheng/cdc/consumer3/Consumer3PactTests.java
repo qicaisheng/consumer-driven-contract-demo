@@ -20,7 +20,7 @@ public class Consumer3PactTests {
 	@Rule
 	public PactProviderRule mockProvider = new PactProviderRule("provider", "localhost", 8080, this);
 
-	@Pact(state = "consumer3 get students", provider="provider", consumer="consumer3")
+	@Pact(consumer="consumer3")
 	public PactFragment createFragment(PactDslWithProvider builder) throws JsonProcessingException {
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json;charset=utf-8");
@@ -38,7 +38,7 @@ public class Consumer3PactTests {
 	}
 
 	@Test
-	@PactVerification("provider")
+	@PactVerification
 	public void runTest() {
 		List<Student> students = new Consumer3Application().getStudents();
 
